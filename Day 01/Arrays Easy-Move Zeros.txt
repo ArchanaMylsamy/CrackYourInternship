@@ -1,0 +1,19 @@
+Move zeros
+
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int n=nums.length;
+        int j=0; //focus on zero
+        for(int i=0;i<n;i++){   //focus on non zero
+            if(nums[i]!=0 && nums[j]==0){
+                int temp=nums[i];
+                nums[i]=nums[j];
+                nums[j]=temp;
+            }
+            if(nums[j]!=0){
+                j++;
+            }
+        }
+        System.out.println(nums);
+    }
+}
